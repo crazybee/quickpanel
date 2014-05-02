@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.crazybee.quicksetting"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="18" />
+
+    <!-- 一键打开wifi -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 设置屏幕亮度 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 设置蓝牙 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 设置振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.sec.android.app.factorymode.permission.KEYSTRING" />
+
+    <!-- 调用相机闪光灯 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+      <!-- 改变网络 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- GPS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="QuickSettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:icon="@drawable/quickopen_icon"
+            android:label="@string/gt_quick_setting" >
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
+        <activity
+            android:name="QuickSettingSelectActivity"
+            android:icon="@drawable/quickopen_icon"
+            android:label="@string/gt_quick_setting" >
+        </activity>
+    </application>
+
+</manifest>
